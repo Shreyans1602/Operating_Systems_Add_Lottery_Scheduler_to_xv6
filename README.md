@@ -45,7 +45,7 @@ This routine returns some information about all running processes, including how
 
 You need to understand how to fill in the structure pstat in the kernel and pass the results to user space. The structure should look like what you see below, in a file called pstat.h. You have to include this file in appropriate .c files.
 
-'''
+'''C++
 #ifndef _PSTAT_H_
 #define _PSTAT_H_
 
