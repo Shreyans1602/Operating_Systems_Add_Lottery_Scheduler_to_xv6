@@ -45,7 +45,6 @@ This routine returns some information about all running processes, including how
 
 You need to understand how to fill in the structure pstat in the kernel and pass the results to user space. The structure should look like what you see below, in a file called pstat.h. You have to include this file in appropriate .c files.
 
-'''C++
 #ifndef _PSTAT_H_
 #define _PSTAT_H_
 
@@ -60,7 +59,6 @@ int ticks[NPROC]; // the number of ticks each process has accumulated
 };
 
 #endif // _PSTAT_H_
-'''
 
 Good examples of how to pass arguments into the kernel are found in existing system calls. In particular, follow the path of read(), which will lead you to sys_read(), which will show you how to use argptr() (and related calls) to obtain a pointer that has been passed into the kernel. Note how careful the kernel is with pointers passed from user space -- they are a security threat(!), and thus must be checked very carefully before usage.
 
